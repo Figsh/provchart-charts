@@ -11,7 +11,16 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
+      - name: Check secret is non-empty
+        env:
+          KEY: ${{ secrets.PROVCHART_API_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "::error::secrets.PROVCHART_API_KEY is empty for this repo"
+            echo "Create a Repository secret named exactly PROVCHART_API_KEY"
+            exit 1
+          fi
+          echo "Secret length: ${#KEY} (OK, value not printed)"
       - name: Generate Chart SVGs
         uses: fscss-ttr/provchart-readme-action@v1.0.3
         with:
