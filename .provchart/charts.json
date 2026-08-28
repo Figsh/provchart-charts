@@ -3,7 +3,7 @@
     "file": "demo.svg",
     "type": "area",
     "theme": "midnight",
-    "width": 480,
+    "width": 640,
     "height": 320,
     "axisX": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     "series": [
@@ -17,6 +17,141 @@
         "color": "#34d399",
         "points": [15, 80, 38, 46, 6, 35, 79]
       }
+    ]
+  },
+  {
+    "file": "traffic-line.svg",
+    "type": "line",
+    "theme": "midnight",
+    "width": 640,
+    "height": 280,
+    "axisX": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "series": [
+      {
+        "name": "Traffic",
+        "color": "#4fd8c4",
+        "points": [30, 45, 40, 60, 55, 70, 65]
+      },
+      {
+        "name": "Signups",
+        "color": "#f0a860",
+        "points": [8, 12, 11, 18, 16, 22, 20]
+      }
+    ]
+  },
+  {
+    "file": "quarterly-bar.svg",
+    "type": "bar",
+    "theme": "midnight",
+    "width": 640,
+    "height": 280,
+    "axisX": ["Q1", "Q2", "Q3", "Q4"],
+    "series": [
+      {
+        "name": "2025",
+        "color": "#8b7bff",
+        "points": [48, 55, 42, 68]
+      },
+      {
+        "name": "2026",
+        "color": "#4fd8c4",
+        "points": [40, 62, 58, 74]
+      }
+    ]
+  },
+  {
+    "file": "revenue-stack.svg",
+    "type": "stackedbar",
+    "theme": "midnight",
+    "width": 640,
+    "height": 280,
+    "axisX": ["Jan", "Feb", "Mar", "Apr"],
+    "series": [
+      {
+        "name": "Product",
+        "color": "#8b7bff",
+        "points": [28, 32, 30, 38]
+      },
+      {
+        "name": "Services",
+        "color": "#4fd8c4",
+        "points": [18, 22, 26, 24]
+      },
+      {
+        "name": "Other",
+        "color": "#f0a860",
+        "points": [8, 10, 9, 12]
+      }
+    ]
+  },
+  {
+    "file": "skills-hbar.svg",
+    "type": "hbar",
+    "theme": "midnight",
+    "width": 640,
+    "height": 300,
+    "axisX": ["CSS", "HTML", "JS", "SVG", "A11y"],
+    "series": [
+      {
+        "name": "Score",
+        "color": "#8b7bff",
+        "points": [92, 86, 78, 70, 64]
+      }
+    ]
+  },
+  {
+    "file": "latency.svg",
+    "type": "line",
+    "theme": "midnight",
+    "width": 640,
+    "height": 260,
+    "axisX": ["00", "04", "08", "12", "16", "20", "24"],
+    "series": [
+      {
+        "name": "p50",
+        "color": "#4fd8c4",
+        "points": [28, 32, 30, 36, 34, 40, 38]
+      },
+      {
+        "name": "p95",
+        "color": "#f0a860",
+        "points": [48, 55, 52, 62, 58, 70, 65]
+      }
+    ]
+  },
+  {
+    "file": "sales-combo.svg",
+    "type": "combo",
+    "theme": "midnight",
+    "width": 640,
+    "height": 280,
+    "axisX": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "series": [
+      {
+        "name": "Sales",
+        "type": "bar",
+        "color": "#8b7bff",
+        "points": [32, 44, 38, 52, 48, 60]
+      },
+      {
+        "name": "Trend",
+        "type": "line",
+        "color": "#4fd8c4",
+        "points": [30, 40, 36, 50, 46, 58]
+      }
+    ]
+  },
+  {
+    "file": "health-gauge.svg",
+    "type": "gauge",
+    "theme": "midnight",
+    "width": 320,
+    "height": 320,
+    "label": "Health",
+    "series": [
+      { "name": "CPU", "value": 72, "color": "#ff5e7d" },
+      { "name": "RAM", "value": 54, "color": "#4fd8c4" },
+      { "name": "Disk", "value": 38, "color": "#8b7bff" }
     ]
   }
 ]
