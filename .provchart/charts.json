@@ -145,8 +145,8 @@
     "file": "health-gauge.svg",
     "type": "gauge",
     "theme": "midnight",
-    "width": 320,
-    "height": 320,
+    "width": 120,
+    "height": 120,
     "label": "Health",
     "series": [
       { "name": "CPU", "value": 72, "color": "#ff5e7d" },
