@@ -1,14 +1,22 @@
-{
-  "charts": [
-    {
-      "file": "traffic.svg",
-      "type": "area",
-      "width": 640,
-      "height": 240,
-      "series": [
-        { "name": "Traffic", "color": "#8b7bff", "points": [20, 35, 50, 65, 85] }
-      ],
-      "axisX": ["Mon", "Tue", "Wed", "Thu", "Fri"]
-    }
-  ]
-}
+[
+  {
+    "file": "demo.svg",
+    "type": "area",
+    "theme": "midnight",
+    "width": 480,
+    "height": 320,
+    "axisX": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "series": [
+      {
+        "name": "API Requests",
+        "color": "#8b7bff",
+        "points": [20, 85, 40, 60, 10, 40, 95]
+      },
+      {
+        "name": "Successful Responses",
+        "color": "#34d399",
+        "points": [15, 80, 38, 64, 6, 35, 79]
+      }
+    ]
+  }
+]
