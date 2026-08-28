@@ -1,16 +1,19 @@
-name: Update ProvChart README SVGs
+name: Test ProvChart Action
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # Daily at midnight
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: write
 
 jobs:
-  update-charts:
+  charts:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
       - name: Check secret is non-empty
         env:
           KEY: ${{ secrets.PROVCHART_API_KEY }}
@@ -21,15 +24,18 @@ jobs:
             exit 1
           fi
           echo "Secret length: ${#KEY} (OK, value not printed)"
-      - name: Generate Chart SVGs
+
+      - name: Generate SVGs
         uses: fscss-ttr/provchart-readme-action@v1.0.3
         with:
           api-key: ${{ secrets.PROVCHART_API_KEY }}
-          config: '.provchart/charts.json'
-          output-dir: 'docs/charts'
+        env:
+          PROVCHART_API_KEY: ${{ secrets.PROVCHART_API_KEY }}
+          INPUT_CONFIG: .provchart/charts.json
+          INPUT_OUTPUT_DIR: docs/charts
 
-      - name: Commit and Push Changes
+      - name: Commit generated charts
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update provchart SVG [skip ci]"
-          file_pattern: 'docs/charts/*.svg'
+          commit_message: "chore: update generated ProvChart SVGs"
+          file_pattern: "docs/charts/*.svg"
