@@ -1,41 +1,30 @@
-name: Test ProvChart Action
+name: Generate ProvChart README SVGs
 
 on:
+  push:
+    paths:
+      - ".provchart/**"
+      - ".github/workflows/charts.yml"
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
 
 permissions:
   contents: write
 
 jobs:
-  charts:
+  build-charts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Check secret is non-empty
-        env:
-          KEY: ${{ secrets.PROVCHART_API_KEY }}
-        run: |
-          if [ -z "$KEY" ]; then
-            echo "::error::secrets.PROVCHART_API_KEY is empty for this repo"
-            echo "Create a Repository secret named exactly PROVCHART_API_KEY"
-            exit 1
-          fi
-          echo "Secret length: ${#KEY} (OK, value not printed)"
 
       - name: Generate SVGs
         uses: fscss-ttr/provchart-readme-action@v1.0.4
         with:
           api-key: ${{ secrets.PROVCHART_API_KEY }}
-        env:
-          PROVCHART_API_KEY: ${{ secrets.PROVCHART_API_KEY }}
-          INPUT_CONFIG: .provchart/charts.json
-          INPUT_OUTPUT_DIR: docs/charts
+          config: .provchart/charts.json
+          output-dir: docs/charts
 
       - name: Commit generated charts
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update generated ProvChart SVGs"
+          commit_message: "chore: update ProvChart SVGs"
           file_pattern: "docs/charts/*.svg"
