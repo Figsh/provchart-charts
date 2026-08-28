@@ -1,1 +1,30 @@
+name: Update ProvChart README SVGs
 
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch:
+
+jobs:
+  update-chart:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate ProvChart SVG
+        uses: fscss-ttr/provchart-readme-action@v1.0.3
+        with:
+          api_key: ${{ secrets.PROVCHART_API_KEY }}
+          chart_type: 'area'
+          output_path: 'docs/charts/traffic.svg'
+          series_data: '[{"name":"Traffic","color":"#8b7bff","points":[20,35,50,65,85]}]'
+          axis_x: '["Mon","Tue","Wed","Thu","Fri"]'
+          width: 640
+          height: 240
+
+      - name: Commit and push updated chart
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update provchart README SVG [skip ci]"
+          file_pattern: 'docs/charts/*.svg'
