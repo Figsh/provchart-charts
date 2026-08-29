@@ -5,17 +5,17 @@
     "theme": "midnight",
     "width": 640,
     "height": 320,
-    "axisX": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "axisX": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "This Week"],
     "series": [
       {
         "name": "API Requests",
         "color": "#8b7bff",
-        "points": [20, 85, 40, 60, 10, 40, 95]
+        "points": [20, 85, 40, 60, 10, 40, 95, 77]
       },
       {
         "name": "Successful Responses",
         "color": "#34d399",
-        "points": [15, 80, 38, 46, 6, 35, 79]
+        "points": [15, 80, 38, 46, 6, 35, 79,77]
       }
     ]
   },
