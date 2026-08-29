@@ -104,7 +104,7 @@
     "type": "line",
     "theme": "midnight",
     "width": 640,
-    "height": 260,
+    "height": 160,
     "axisX": ["00", "04", "08", "12", "16", "20", "24"],
     "series": [
       {
