@@ -153,5 +153,16 @@
       { "name": "RAM", "value": 54, "color": "#4fd8c4" },
       { "name": "Disk", "value": 38, "color": "#8b7bff" }
     ]
+  }, 
+  {
+    "file": "1-gauge.svg",
+    "type": "gauge",
+    "theme": "midnight",
+    "width": 220,
+    "height": 220,
+    "label": "Disk",
+    "series": [
+      { "name": "Disk", "value": 88, "color": "#8b7bff" }
+    ]
   }
 ]
