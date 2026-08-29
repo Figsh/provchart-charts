@@ -40,6 +40,10 @@ Config: [`.provchart/charts.json`](./.provchart/charts.json)
 
 ![Gauge](./docs/charts/health-gauge.svg)
 
+## Disk
+
+![1 Gauge](./docs/charts/1-gauge.svg)
+
 ---
 
 ## Setup
