@@ -42,7 +42,7 @@ Config: [`.provchart/charts.json`](./.provchart/charts.json)
 
 ## Disk
 
-![1 Gauge](./docs/charts/1-gauge.svg)
+![Disk Gauge](./docs/charts/1-gauge.svg)
 
 ---
 
