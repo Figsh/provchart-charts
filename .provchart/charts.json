@@ -5,17 +5,19 @@
     "theme": "midnight",
     "width": 640,
     "height": 320,
+    "min": 0,
+    "max": 3500,
     "axisX": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "This Week"],
     "series": [
       {
         "name": "API Requests",
         "color": "#8b7bff",
-        "points": [20, 85, 40, 60, 10, 40, 95, 77]
+        "points": [420, 2100, 980, 1650, 310, 1200, 2800, 2400]
       },
       {
         "name": "Successful Responses",
         "color": "#34d399",
-        "points": [15, 80, 38, 46, 6, 35, 79,77]
+        "points": [380, 1980, 920, 1500, 280, 1100, 2650, 2300]
       }
     ]
   },
@@ -25,17 +27,19 @@
     "theme": "midnight",
     "width": 640,
     "height": 280,
+    "min": 0,
+    "max": 50000,
     "axisX": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     "series": [
       {
-        "name": "Traffic",
+        "name": "Page views",
         "color": "#4fd8c4",
-        "points": [30, 45, 85, 60, 55, 70, 65]
+        "points": [12000, 18500, 42000, 28000, 31000, 36000, 29500]
       },
       {
         "name": "Signups",
         "color": "#f0a860",
-        "points": [8, 12, 145, 18, 46, 22, 80]
+        "points": [1100, 1600, 4800, 2200, 3900, 2700, 5100]
       }
     ]
   },
@@ -45,17 +49,19 @@
     "theme": "midnight",
     "width": 640,
     "height": 280,
+    "min": 100,
+    "max": 3500,
     "axisX": ["Q1", "Q2", "Q3", "Q4"],
     "series": [
       {
         "name": "2025",
         "color": "#8b7bff",
-        "points": [48, 55, 42, 68]
+        "points": [980, 1420, 1180, 2100]
       },
       {
         "name": "2026",
         "color": "#4fd8c4",
-        "points": [40, 62, 58, 74]
+        "points": [1200, 1890, 1750, 2680]
       }
     ]
   },
@@ -65,22 +71,24 @@
     "theme": "midnight",
     "width": 640,
     "height": 280,
+    "min": 0,
+    "max": 50000,
     "axisX": ["Jan", "Feb", "Mar", "Apr"],
     "series": [
       {
         "name": "Product",
         "color": "#8b7bff",
-        "points": [28, 32, 30, 38]
+        "points": [12000, 14500, 13200, 16800]
       },
       {
         "name": "Services",
         "color": "#4fd8c4",
-        "points": [18, 22, 26, 24]
+        "points": [8000, 9200, 11000, 10500]
       },
       {
         "name": "Other",
         "color": "#f0a860",
-        "points": [8, 10, 9, 12]
+        "points": [2500, 3100, 2800, 3600]
       }
     ]
   },
@@ -90,6 +98,8 @@
     "theme": "midnight",
     "width": 640,
     "height": 300,
+    "min": 0,
+    "max": 100,
     "axisX": ["CSS", "HTML", "JS", "SVG", "A11y"],
     "series": [
       {
@@ -105,22 +115,24 @@
     "theme": "midnight",
     "width": 640,
     "height": 160,
+    "min": 0,
+    "max": 100,
     "axisX": ["00", "04", "08", "12", "16", "20", "24", "28"],
     "series": [
       {
         "name": "p50",
         "color": "#4fd8c4",
-        "points": [28, 32, 60, 36, 34, 40, 38,79]
+        "points": [28, 32, 60, 36, 34, 40, 38, 45]
       },
       {
         "name": "p75",
         "color": "#f0a860",
-        "points": [48, 55, 92, 62, 58, 70, 65, 61]
-      }, 
+        "points": [48, 55, 72, 62, 58, 70, 65, 61]
+      },
       {
         "name": "p95",
         "color": "#faf234",
-        "points": [4, 1, 45, 22, 78, 89, 65, 100]
+        "points": [70, 78, 88, 82, 85, 92, 90, 95]
       }
     ]
   },
@@ -130,19 +142,21 @@
     "theme": "midnight",
     "width": 640,
     "height": 280,
+    "min": 100,
+    "max": 3500,
     "axisX": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     "series": [
       {
         "name": "Sales",
         "type": "bar",
         "color": "#8b7bff",
-        "points": [32, 44, 38, 52, 48, 60]
+        "points": [820, 1100, 980, 1450, 1320, 1680]
       },
       {
         "name": "Trend",
         "type": "line",
         "color": "#4fd8c4",
-        "points": [30, 40, 36, 50, 46, 58]
+        "points": [780, 1050, 940, 1400, 1280, 1600]
       }
     ]
   },
@@ -153,12 +167,14 @@
     "width": 220,
     "height": 220,
     "label": "Health",
+    "min": 0,
+    "max": 100,
     "series": [
       { "name": "CPU", "value": 72, "color": "#ff5e7d" },
       { "name": "RAM", "value": 54, "color": "#4fd8c4" },
       { "name": "Disk", "value": 38, "color": "#8b7bff" }
     ]
-  }, 
+  },
   {
     "file": "1-gauge.svg",
     "type": "gauge",
@@ -166,6 +182,8 @@
     "width": 120,
     "height": 120,
     "label": "Disk",
+    "min": 0,
+    "max": 100,
     "series": [
       { "name": "Disk", "value": 88, "color": "#4fd8c4" }
     ]
