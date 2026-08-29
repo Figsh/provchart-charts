@@ -158,11 +158,11 @@
     "file": "1-gauge.svg",
     "type": "gauge",
     "theme": "midnight",
-    "width": 220,
-    "height": 220,
+    "width": 120,
+    "height": 120,
     "label": "Disk",
     "series": [
-      { "name": "Disk", "value": 88, "color": "#8b7bff" }
+      { "name": "Disk", "value": 88, "color": "#4fd8c4" }
     ]
   }
 ]
